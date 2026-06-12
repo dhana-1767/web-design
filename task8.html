@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.portfolio{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.portfolio h1{
+    color:#333;
+    margin-bottom:10px;
+}
+
+.portfolio p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    background:white;
+}
+
+.gallery-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.1);
+}
+
+.caption{
+    padding:15px;
+    font-weight:bold;
+    color:#333;
+}
+</style>
+</head>
+<body>
+
+<section class="portfolio">
+    <h1>My Portfolio</h1>
+    <p>Some of my recent projects and works.</p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 1">
+            <div class="caption">Project 1</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 2">
+            <div class="caption">Project 2</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 3">
+            <div class="caption">Project 3</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 4">
+            <div class="caption">Project 4</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 5">
+            <div class="caption">Project 5</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 6">
+            <div class="caption">Project 6</div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

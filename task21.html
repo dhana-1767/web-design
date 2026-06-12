@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablet Responsive Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header */
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Navigation */
+nav{
+    background:#1e40af;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:15px 20px;
+}
+
+nav ul li a:hover{
+    background:#1d4ed8;
+}
+
+/* Content Section */
+.container{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    gap:20px;
+    padding:20px;
+}
+
+.sidebar,
+.content{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.card{
+    background:#2563eb;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Tablet View */
+@media screen and (max-width:1024px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    header h1{
+        font-size:28px;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    .container{
+        padding:10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Tablet Responsive Layout</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>Sidebar</h2>
+        <p>
+            This sidebar moves above the content on tablets and mobiles.
+        </p>
+    </aside>
+
+    <section class="content">
+        <h2>Main Content</h2>
+        <p>
+            This layout adapts smoothly across desktop, tablet, and mobile devices.
+        </p>
+
+        <div class="cards">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Tablet Responsive Design</p>
+</footer>
+
+</body>
+</html>

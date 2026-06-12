@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.pricing{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.pricing h2{
+    font-size:40px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.pricing p{
+    color:#666;
+    margin-bottom:50px;
+}
+
+.pricing-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.price-card{
+    background:#fff;
+    width:300px;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+}
+
+.featured{
+    background:#4f46e5;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+.featured h3,
+.featured .price,
+.featured li{
+    color:#fff;
+}
+
+.price-card h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:45px;
+    font-weight:bold;
+    color:#4f46e5;
+    margin-bottom:20px;
+}
+
+.price span{
+    font-size:18px;
+}
+
+.price-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.price-card ul li{
+    padding:10px 0;
+    color:#555;
+    border-bottom:1px solid #eee;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#4f46e5;
+    color:#fff;
+    padding:12px 25px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#3730a3;
+}
+
+.featured .btn{
+    background:#fff;
+    color:#4f46e5;
+}
+
+.featured .btn:hover{
+    background:#e5e7eb;
+}
+</style>
+</head>
+<body>
+
+<section class="pricing">
+    <h2>Our Pricing Plans</h2>
+    <p>Choose the plan that best suits your needs</p>
+
+    <div class="pricing-container">
+
+        <!-- Basic Plan -->
+        <div class="price-card">
+            <h3>Basic</h3>
+            <div class="price">₹499<span>/month</span></div>
+            <ul>
+                <li>1 Website</li>
+                <li>10 GB Storage</li>
+                <li>Email Support</li>
+                <li>Basic Features</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="price-card featured">
+            <h3>Standard</h3>
+            <div class="price">₹999<span>/month</span></div>
+            <ul>
+                <li>5 Websites</li>
+                <li>50 GB Storage</li>
+                <li>Priority Support</li>
+                <li>Advanced Features</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="price-card">
+            <h3>Premium</h3>
+            <div class="price">₹1499<span>/month</span></div>
+            <ul>
+                <li>Unlimited Websites</li>
+                <li>100 GB Storage</li>
+                <li>24/7 Support</li>
+                <li>All Premium Features</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

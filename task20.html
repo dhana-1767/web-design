@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header */
+.header{
+    background:#2563eb;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* Navigation */
+.navbar{
+    background:#1e40af;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+.navbar ul li{
+    margin:0;
+}
+
+.navbar ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+}
+
+.navbar ul li a:hover{
+    background:#1d4ed8;
+}
+
+/* Main Layout */
+.container{
+    display:flex;
+    gap:20px;
+    padding:20px;
+}
+
+/* Sidebar */
+.sidebar{
+    flex:1;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Content */
+.content{
+    flex:3;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.content h2{
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* Footer */
+.footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .navbar ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .container{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <h1>Responsive Website</h1>
+</header>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h3>Sidebar</h3>
+        <p>
+            Navigation links, categories,
+            recent posts, or advertisements.
+        </p>
+    </aside>
+
+    <main class="content">
+        <h2>Main Content</h2>
+        <p>
+            This layout automatically adjusts based on screen size.
+            On desktops, the sidebar and content appear side by side.
+            On mobile devices, they stack vertically for better usability.
+        </p>
+    </main>
+
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 Responsive Layout. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonial Section</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.testimonials{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.testimonials h2{
+    font-size:36px;
+    color:#333;
+    margin-bottom:40px;
+}
+
+.testimonial-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.testimonial-card{
+    background:#fff;
+    padding:25px;
+    width:300px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+}
+
+.testimonial-card img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.testimonial-card p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.testimonial-card h3{
+    color:#222;
+    margin-bottom:5px;
+}
+
+.testimonial-card span{
+    color:#888;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/80" alt="Client">
+            <p>
+                "Excellent service and professional support.
+                The team exceeded our expectations."
+            </p>
+            <h3>John Smith</h3>
+            <span>Web Developer</span>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/80" alt="Client">
+            <p>
+                "Amazing experience! The design quality and
+                customer support were outstanding."
+            </p>
+            <h3>Sarah Johnson</h3>
+            <span>UI Designer</span>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://via.placeholder.com/80" alt="Client">
+            <p>
+                "Highly recommended. Fast delivery and
+                excellent communication throughout."
+            </p>
+            <h3>David Wilson</h3>
+            <span>Project Manager</span>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
