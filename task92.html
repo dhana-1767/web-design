@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voice Assistant UI</title>
+  <link rel="stylesheet" href="voice-assistant.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Voice Assistant</h1>
+
+    <section class="controls">
+      <button id="mic" class="mic" aria-pressed="false" title="Start/stop listening">
+        <span class="dot"></span>
+        <span id="mic-label">Start</span>
+      </button>
+
+      <label class="option">
+        <input type="checkbox" id="continuous" checked>
+        Continuous
+      </label>
+
+      <label class="option">
+        Voice:
+        <select id="voiceSelect"></select>
+      </label>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <h2>Transcript</h2>
+        <div id="transcript" class="box" aria-live="polite"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Assistant</h2>
+        <div id="response" class="box" aria-live="polite">Assistant responses appear here.</div>
+      </div>
+    </section>
+
+    <footer class="notes">Tip: Use Chrome or Edge for Speech API support.</footer>
+  </main>
+
+  <script src="voice-assistant.js"></script>
+</body>
+</html>

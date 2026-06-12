@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Button Styles</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+/* Primary Button */
+.btn-primary{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+/* Gradient Button */
+.btn-gradient{
+    background:linear-gradient(45deg,#ff6b6b,#f06595);
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+/* Outline Button */
+.btn-outline{
+    background:transparent;
+    color:#2563eb;
+    border:2px solid #2563eb;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-outline:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* Glass Button */
+.btn-glass{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.4);
+    padding:12px 24px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+/* Neon Button */
+.btn-neon{
+    background:#111;
+    color:#0ff;
+    border:2px solid #0ff;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:0 0 10px #0ff;
+}
+
+/* 3D Button */
+.btn-3d{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:0 5px 0 #cc7a00;
+}
+
+.btn-3d:active{
+    transform:translateY(5px);
+    box-shadow:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <button class="btn-primary">Primary</button>
+    <button class="btn-gradient">Gradient</button>
+    <button class="btn-outline">Outline</button>
+    <button class="btn-glass">Glass</button>
+    <button class="btn-neon">Neon</button>
+    <button class="btn-3d">3D Button</button>
+</div>
+
+</body>
+</html>

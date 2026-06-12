@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Illustration</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f6f9;
+}
+
+svg{
+    width:600px;
+    max-width:90%;
+}
+</style>
+</head>
+<body>
+
+<svg viewBox="0 0 800 500">
+
+    <!-- Gradient Definition -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6C63FF"/>
+            <stop offset="100%" stop-color="#42A5F5"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background Circle -->
+    <circle cx="650" cy="120" r="80"
+            fill="url(#bgGradient)"
+            opacity="0.3"/>
+
+    <circle cx="120" cy="380" r="100"
+            fill="#42A5F5"
+            opacity="0.2"/>
+
+    <!-- Main Card -->
+    <rect x="220" y="100"
+          width="360"
+          height="250"
+          rx="20"
+          fill="white"
+          stroke="#e5e7eb"
+          stroke-width="2"/>
+
+    <!-- Header -->
+    <rect x="250" y="130"
+          width="180"
+          height="20"
+          rx="10"
+          fill="#6C63FF"/>
+
+    <!-- Content Lines -->
+    <rect x="250" y="180"
+          width="280"
+          height="12"
+          rx="6"
+          fill="#d1d5db"/>
+
+    <rect x="250" y="210"
+          width="240"
+          height="12"
+          rx="6"
+          fill="#d1d5db"/>
+
+    <rect x="250" y="240"
+          width="200"
+          height="12"
+          rx="6"
+          fill="#d1d5db"/>
+
+    <!-- Button -->
+    <rect x="250" y="290"
+          width="120"
+          height="40"
+          rx="20"
+          fill="#42A5F5"/>
+
+    <!-- Floating Shapes -->
+    <circle cx="180" cy="140"
+            r="25"
+            fill="#FF6584"/>
+
+    <rect x="610" y="260"
+          width="50"
+          height="50"
+          rx="10"
+          fill="#FFC107"/>
+
+    <polygon points="650,380 700,450 600,450"
+             fill="#4CAF50"/>
+
+</svg>
+
+</body>
+</html>

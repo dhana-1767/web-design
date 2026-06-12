@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallax Section</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+}
+
+/* Normal Section */
+.section{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f4f4;
+    font-size:2rem;
+}
+
+/* Parallax Section */
+.parallax{
+    height:100vh;
+    background-image:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.parallax-content{
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    padding:30px 50px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.parallax-content h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+
+<section class="section">
+    Scroll Down ⬇
+</section>
+
+<section class="parallax">
+    <div class="parallax-content">
+        <h1>Parallax Effect</h1>
+        <p>Beautiful scrolling experience</p>
+    </div>
+</section>
+
+<section class="section">
+    More Content Here
+</section>
+
+</body>
+</html>

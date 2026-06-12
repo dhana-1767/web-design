@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Modal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f6f9;
+}
+
+/* Open Button */
+.open-btn{
+    padding:14px 28px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* Modal Overlay */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+/* Modal Box */
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:450px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+    animation:popup 0.3s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-content h2{
+    margin-bottom:15px;
+    color:#222;
+}
+
+.modal-content p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* Close Button */
+.close-btn{
+    position:absolute;
+    top:12px;
+    right:15px;
+    font-size:24px;
+    cursor:pointer;
+    color:#555;
+}
+
+/* Action Button */
+.action-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .modal-content{
+        padding:20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<button class="open-btn" onclick="openModal()">
+    Open Modal
+</button>
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">
+            &times;
+        </span>
+
+        <h2>🎉 Welcome!</h2>
+
+        <p>
+            This is a responsive popup modal.
+            You can use it for login forms,
+            notifications, alerts, offers, or confirmations.
+        </p>
+
+        <button class="action-btn">
+            Get Started
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+const modal = document.getElementById("modal");
+
+function openModal(){
+    modal.style.display = "flex";
+}
+
+function closeModal(){
+    modal.style.display = "none";
+}
+
+/* Close when clicking outside */
+window.onclick = function(event){
+    if(event.target === modal){
+        closeModal();
+    }
+};
+
+</script>
+
+</body>
+</html>

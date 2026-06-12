@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Navigation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        nav{
+            background:#333;
+        }
+
+        .menu{
+            list-style:none;
+            display:flex;
+        }
+
+        .menu li{
+            position:relative;
+        }
+
+        .menu li a{
+            display:block;
+            color:white;
+            text-decoration:none;
+            padding:15px 20px;
+        }
+
+        .menu li:hover{
+            background:#555;
+        }
+
+        /* Dropdown */
+        .dropdown{
+            display:none;
+            position:absolute;
+            top:100%;
+            left:0;
+            background:#444;
+            min-width:180px;
+            list-style:none;
+        }
+
+        .dropdown li a{
+            padding:12px 15px;
+        }
+
+        .menu li:hover .dropdown{
+            display:block;
+        }
+
+        .dropdown li:hover{
+            background:#666;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+
+        <li>
+            <a href="#">Services ▼</a>
+            <ul class="dropdown">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">SEO</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">Products ▼</a>
+            <ul class="dropdown">
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Mobiles</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

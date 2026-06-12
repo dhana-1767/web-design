@@ -1,0 +1,155 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Flow Wireframe</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:380px;
+    background:white;
+    border:2px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.screen{
+    display:none;
+    padding:20px;
+}
+
+.active{
+    display:block;
+}
+
+.header{
+    background:#e5e5e5;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.box{
+    border:2px dashed #999;
+    padding:20px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#555;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HOME -->
+    <div class="screen active" id="home">
+        <div class="header">Home Screen</div>
+
+        <div class="box">Search Bar</div>
+        <div class="box">Banner</div>
+        <div class="box">Product Card</div>
+
+        <button class="btn" onclick="showScreen('product')">
+            View Product
+        </button>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="screen" id="product">
+        <div class="header">Product Details</div>
+
+        <div class="box">Product Image</div>
+        <div class="box">Price: ₹999</div>
+        <div class="box">Description</div>
+
+        <button class="btn" onclick="showScreen('cart')">
+            Add To Cart
+        </button>
+    </div>
+
+    <!-- CART -->
+    <div class="screen" id="cart">
+        <div class="header">Shopping Cart</div>
+
+        <div class="box">
+            Product 1<br>
+            Qty: 1<br>
+            ₹999
+        </div>
+
+        <button class="btn" onclick="showScreen('checkout')">
+            Checkout
+        </button>
+    </div>
+
+    <!-- CHECKOUT -->
+    <div class="screen" id="checkout">
+        <div class="header">Checkout</div>
+
+        <div class="box">Delivery Address</div>
+        <div class="box">Payment Method</div>
+        <div class="box">Total: ₹999</div>
+
+        <button class="btn" onclick="showScreen('success')">
+            Pay Now
+        </button>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="screen" id="success">
+        <div class="header">Order Success</div>
+
+        <div class="box">
+            ✓ Order Placed Successfully
+        </div>
+
+        <button class="btn" onclick="showScreen('home')">
+            Back To Home
+        </button>
+    </div>
+
+</div>
+
+<script>
+function showScreen(id){
+    document.querySelectorAll('.screen').forEach(screen=>{
+        screen.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>

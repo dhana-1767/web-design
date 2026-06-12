@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Brochure</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    padding:30px;
+}
+
+.brochure{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.panel{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    min-height:700px;
+}
+
+/* Cover Panel */
+.cover{
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+    color:white;
+    text-align:center;
+    padding:50px 25px;
+}
+
+.logo{
+    font-size:70px;
+}
+
+.cover h1{
+    margin-top:30px;
+    font-size:42px;
+}
+
+.cover p{
+    margin-top:20px;
+    line-height:1.8;
+    opacity:0.9;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 28px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* Middle Panel */
+.content{
+    padding:30px;
+}
+
+.content h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.content p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.course{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* Contact Panel */
+.contact{
+    background:#111827;
+    color:white;
+    padding:30px;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.info{
+    margin-bottom:18px;
+    line-height:1.8;
+}
+
+.highlights{
+    margin-top:30px;
+}
+
+.highlight{
+    background:rgba(255,255,255,0.08);
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+
+<div class="brochure">
+
+    <!-- Cover -->
+    <div class="panel cover">
+
+        <div class="logo">🎓</div>
+
+        <h1>ABC College</h1>
+
+        <p>
+            Empowering students through quality education,
+            innovation, and career-focused learning.
+        </p>
+
+        <a href="#" class="btn">Apply Now</a>
+
+    </div>
+
+    <!-- About & Courses -->
+    <div class="panel content">
+
+        <h2>About Us</h2>
+
+        <p>
+            ABC College is committed to academic excellence,
+            industry-oriented learning, and holistic student development.
+        </p>
+
+        <h2>Programs Offered</h2>
+
+        <div class="course">💻 Computer Science & Engineering</div>
+        <div class="course">⚙ Mechanical Engineering</div>
+        <div class="course">📊 Business Administration</div>
+        <div class="course">🔬 Biotechnology</div>
+        <div class="course">📱 Information Technology</div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="panel contact">
+
+        <h2>Contact Information</h2>
+
+        <div class="info">
+            📍 Salem, Tamil Nadu
+        </div>
+
+        <div class="info">
+            📞 +91 98765 43210
+        </div>
+
+        <div class="info">
+            📧 admissions@abccollege.edu
+        </div>
+
+        <div class="info">
+            🌐 www.abccollege.edu
+        </div>
+
+        <div class="highlights">
+            <div class="highlight">🏆 NAAC Accredited Institution</div>
+            <div class="highlight">🎯 Placement Assistance</div>
+            <div class="highlight">📚 Modern Library & Labs</div>
+            <div class="highlight">🌍 Industry Partnerships</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infographic Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    background:#fff;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header{
+    text-align:center;
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    color:white;
+}
+
+.header h1{
+    margin-bottom:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.stat-card{
+    text-align:center;
+    background:#eef4ff;
+    padding:20px;
+    border-radius:12px;
+}
+
+.stat-card h2{
+    color:#4f46e5;
+    font-size:32px;
+}
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.step{
+    text-align:center;
+    flex:1;
+    min-width:120px;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#4f46e5;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-weight:bold;
+}
+
+.line{
+    height:4px;
+    background:#4f46e5;
+    flex:1;
+    margin:0 10px;
+}
+
+.charts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.chart{
+    background:#eef4ff;
+    padding:30px;
+    text-align:center;
+    border-radius:12px;
+}
+
+.process{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.process div{
+    background:#4f46e5;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature-card{
+    text-align:center;
+    background:#eef4ff;
+    padding:20px;
+    border-radius:12px;
+}
+
+.feature-card .icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.takeaways ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.footer{
+    text-align:center;
+    background:#111827;
+    color:white;
+}
+
+@media(max-width:768px){
+    .charts{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="section header">
+        <h1>Business Growth Infographic</h1>
+        <p>Annual Performance Overview 2026</p>
+    </div>
+
+    <!-- Statistics -->
+    <div class="section">
+        <div class="stats">
+            <div class="stat-card">
+                <h2>85%</h2>
+                <p>Growth Rate</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>120K</h2>
+                <p>Users</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>95%</h2>
+                <p>Success Rate</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>4.8★</h2>
+                <p>Customer Rating</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="section">
+        <h2 style="text-align:center;margin-bottom:20px;">
+            Project Timeline
+        </h2>
+
+        <div class="timeline">
+            <div class="step">
+                <div class="circle">1</div>
+                <p>Research</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="circle">2</div>
+                <p>Planning</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="circle">3</div>
+                <p>Development</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="circle">4</div>
+                <p>Launch</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="section">
+        <div class="charts">
+            <div class="chart">
+                <h3>Pie Chart Area</h3>
+                <p>Sales Distribution</p>
+            </div>
+
+            <div class="chart">
+                <h3>Bar Chart Area</h3>
+                <p>Monthly Revenue</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process Flow -->
+    <div class="section">
+        <h2 style="text-align:center;margin-bottom:20px;">
+            Process Flow
+        </h2>
+
+        <div class="process">
+            <div>Input</div>
+            <div>Analysis</div>
+            <div>Development</div>
+            <div>Testing</div>
+            <div>Results</div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Analytics</h3>
+                <p>Real-time business insights.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🚀</div>
+                <h3>Growth</h3>
+                <p>Improved performance metrics.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">💡</div>
+                <h3>Innovation</h3>
+                <p>Creative and scalable solutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="section takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Strong annual growth performance.</li>
+            <li>High customer satisfaction score.</li>
+            <li>Increased user engagement.</li>
+            <li>Successful project execution.</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="section footer">
+        <p>© 2026 Infographic Dashboard | Data Source: Company Reports</p>
+    </div>
+
+</div>
+
+</body>
+</html>

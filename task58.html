@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Banner</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Banner */
+.banner{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background:linear-gradient(
+        -45deg,
+        #667eea,
+        #764ba2,
+        #6a11cb,
+        #2575fc
+    );
+    background-size:400% 400%;
+    animation:gradientMove 8s ease infinite;
+}
+
+/* Heading Animation */
+.banner h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    animation:slideDown 1.2s ease;
+}
+
+/* Text Animation */
+.banner p{
+    font-size:1.3rem;
+    margin-bottom:25px;
+    animation:fadeIn 2s ease;
+}
+
+/* Button */
+.btn{
+    text-decoration:none;
+    color:white;
+    border:2px solid white;
+    padding:12px 30px;
+    border-radius:30px;
+    transition:0.3s;
+    animation:fadeIn 3s ease;
+}
+
+.btn:hover{
+    background:white;
+    color:#333;
+}
+
+/* Keyframes */
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+</style>
+</head>
+<body>
+
+<section class="banner">
+    <h1>Welcome to Our Website</h1>
+    <p>Create Amazing Experiences with Modern UI Design</p>
+    <a href="#" class="btn">Get Started</a>
+</section>
+
+</body>
+</html>

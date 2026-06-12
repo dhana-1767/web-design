@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Production Ready Web Design Package</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --accent:#f97316;
+    --success:#22c55e;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --border:#e2e8f0;
+    --text:#334155;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--light);
+    color:var(--text);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+header h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+header p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+}
+
+/* Section */
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--secondary);
+    font-size:2.4rem;
+}
+
+/* Cards */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:var(--secondary);
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card ul li{
+    padding:8px 0;
+}
+
+/* Features */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Pricing */
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.price-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.price{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--primary);
+    margin:20px 0;
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    border:1px solid var(--border);
+    text-align:left;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#2563eb,#0f172a);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+/* Footer */
+footer{
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2.3rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Production Ready Web Design Package</h1>
+    <p>
+        Complete UI/UX Design, Development, SEO, Performance Optimization,
+        Testing, and Deployment Package for Businesses & Startups.
+    </p>
+
+    <a href="#" class="btn">Get Proposal</a>
+</header>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Package Deliverables</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>🎨 Design</h3>
+                <ul>
+                    <li>UI Design</li>
+                    <li>Wireframes</li>
+                    <li>Prototype</li>
+                    <li>Design System</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>💻 Development</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Layout</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🚀 SEO</h3>
+                <ul>
+                    <li>Meta Tags</li>
+                    <li>Sitemap</li>
+                    <li>Schema Markup</li>
+                    <li>Open Graph</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🔒 Security</h3>
+                <ul>
+                    <li>HTTPS</li>
+                    <li>Form Protection</li>
+                    <li>Validation</li>
+                    <li>Spam Prevention</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Key Features</h2>
+
+        <div class="features">
+            <div class="feature">Responsive Design</div>
+            <div class="feature">Fast Loading</div>
+            <div class="feature">Accessibility</div>
+            <div class="feature">SEO Optimized</div>
+            <div class="feature">Modern UI</div>
+            <div class="feature">Analytics Ready</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Technology Stack</h2>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Technology</th>
+            </tr>
+
+            <tr>
+                <td>Frontend</td>
+                <td>HTML5, CSS3, JavaScript</td>
+            </tr>
+
+            <tr>
+                <td>Framework</td>
+                <td>Bootstrap / Tailwind CSS</td>
+            </tr>
+
+            <tr>
+                <td>Design Tool</td>
+                <td>Figma, Adobe XD</td>
+            </tr>
+
+            <tr>
+                <td>Deployment</td>
+                <td>Vercel, Netlify, GitHub Pages</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Pricing Plans</h2>
+
+        <div class="pricing">
+
+            <div class="price-card">
+                <h3>Basic</h3>
+                <div class="price">₹15,000</div>
+                <p>Portfolio & Landing Pages</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Business</h3>
+                <div class="price">₹35,000</div>
+                <p>Corporate Websites</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Premium</h3>
+                <div class="price">₹75,000</div>
+                <p>Startup & SaaS Solutions</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Performance Targets</h2>
+
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Target</th>
+            </tr>
+
+            <tr>
+                <td>Lighthouse Performance</td>
+                <td>95+</td>
+            </tr>
+
+            <tr>
+                <td>Accessibility</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                <td>Best Practices</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                <td>SEO Score</td>
+                <td>100</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Ready to Launch Your Project?</h2>
+    <p style="margin-top:15px;">
+        End-to-end design and development package for modern businesses.
+    </p>
+
+    <a href="#" class="btn">Start Project</a>
+</section>
+
+<footer>
+    © 2026 Dhana • UI/UX Designer & Front-End Developer
+</footer>
+
+</body>
+</html>

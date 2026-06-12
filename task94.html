@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    background:#1e293b;
+    color:#fff;
+    padding:25px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    background:#3b82f6;
+}
+
+/* Main */
+.main{
+    padding:25px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.search{
+    padding:10px;
+    width:280px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#555;
+}
+
+.value{
+    font-size:32px;
+    font-weight:bold;
+    margin-top:10px;
+    color:#2563eb;
+}
+
+/* Device Panel */
+.device-panel{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.device{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.device h3{
+    margin-bottom:10px;
+}
+
+.status{
+    display:inline-block;
+    padding:6px 12px;
+    background:#22c55e;
+    color:white;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* Progress Bar */
+.progress{
+    height:10px;
+    background:#e5e7eb;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.progress-bar{
+    height:100%;
+    width:78%;
+    background:#3b82f6;
+    border-radius:20px;
+}
+
+/* Table */
+table{
+    width:100%;
+    margin-top:25px;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+th,td{
+    padding:14px;
+    text-align:left;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>🌐 IoT Monitor</h2>
+        <ul>
+            <li>🏠 Dashboard</li>
+            <li>📡 Sensors</li>
+            <li>💡 Devices</li>
+            <li>📊 Analytics</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="header">
+            <h1>IoT Dashboard</h1>
+            <input type="text" class="search" placeholder="Search Devices">
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Connected Devices</h3>
+                <div class="value">248</div>
+            </div>
+
+            <div class="card">
+                <h3>Temperature</h3>
+                <div class="value">26°C</div>
+            </div>
+
+            <div class="card">
+                <h3>Humidity</h3>
+                <div class="value">68%</div>
+            </div>
+
+            <div class="card">
+                <h3>Power Usage</h3>
+                <div class="value">4.8kW</div>
+            </div>
+        </div>
+
+        <!-- Devices -->
+        <div class="device-panel">
+
+            <div class="device">
+                <h3>Smart Sensor #101</h3>
+                <span class="status">Online</span>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <p style="margin-top:10px;">Battery: 78%</p>
+            </div>
+
+            <div class="device">
+                <h3>Smart Light #202</h3>
+                <span class="status">Online</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width:90%"></div>
+                </div>
+                <p style="margin-top:10px;">Power: 90%</p>
+            </div>
+
+            <div class="device">
+                <h3>Security Camera #303</h3>
+                <span class="status">Online</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width:65%"></div>
+                </div>
+                <p style="margin-top:10px;">Storage: 65%</p>
+            </div>
+
+        </div>
+
+        <!-- Data Table -->
+        <table>
+            <tr>
+                <th>Device</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Last Update</th>
+            </tr>
+
+            <tr>
+                <td>Temperature Sensor</td>
+                <td>Room A</td>
+                <td>Online</td>
+                <td>2 min ago</td>
+            </tr>
+
+            <tr>
+                <td>Humidity Sensor</td>
+                <td>Room B</td>
+                <td>Online</td>
+                <td>1 min ago</td>
+            </tr>
+
+            <tr>
+                <td>Smart Camera</td>
+                <td>Entrance</td>
+                <td>Online</td>
+                <td>30 sec ago</td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

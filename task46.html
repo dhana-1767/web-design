@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breadcrumb Navigation</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+.breadcrumb{
+    list-style:none;
+    display:flex;
+    background:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.breadcrumb li{
+    display:flex;
+    align-items:center;
+}
+
+.breadcrumb li+li::before{
+    content: ">";
+    color:#666;
+    margin:0 10px;
+}
+
+.breadcrumb a{
+    text-decoration:none;
+    color:#007bff;
+    font-weight:500;
+}
+
+.breadcrumb a:hover{
+    text-decoration:underline;
+}
+
+.breadcrumb .active{
+    color:#555;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Breadcrumb Navigation Example</h2>
+
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Electronics</a></li>
+    <li class="active">Laptop</li>
+</ul>
+
+</body>
+</html>

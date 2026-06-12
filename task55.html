@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Animations</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* Button Base */
+.btn{
+    padding:15px 30px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    color:#fff;
+    border-radius:8px;
+    transition:all 0.3s ease;
+}
+
+/* Zoom Effect */
+.zoom{
+    background:#2563eb;
+}
+.zoom:hover{
+    transform:scale(1.1);
+}
+
+/* Lift Effect */
+.lift{
+    background:#10b981;
+}
+.lift:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Rotate Effect */
+.rotate{
+    background:#f59e0b;
+}
+.rotate:hover{
+    transform:rotate(5deg);
+}
+
+/* Glow Effect */
+.glow{
+    background:#8b5cf6;
+}
+.glow:hover{
+    box-shadow:0 0 20px rgba(139,92,246,0.8);
+}
+
+/* Slide Background */
+.slide{
+    background:#ef4444;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.2);
+    transition:0.4s;
+}
+
+.slide:hover::before{
+    left:100%;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn zoom">Zoom</button>
+    <button class="btn lift">Lift</button>
+    <button class="btn rotate">Rotate</button>
+    <button class="btn glow">Glow</button>
+    <button class="btn slide">Slide Shine</button>
+</div>
+
+</body>
+</html>

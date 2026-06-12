@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Palette System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    padding:40px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.palette-group{
+    margin-bottom:35px;
+}
+
+.palette-title{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#444;
+}
+
+.colors{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.color-card{
+    width:150px;
+    height:120px;
+    border-radius:12px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:12px;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.primary-1{background:#2563EB;}
+.primary-2{background:#3B82F6;}
+.primary-3{background:#93C5FD;}
+
+.secondary-1{background:#7C3AED;}
+.secondary-2{background:#A855F7;}
+.secondary-3{background:#D8B4FE;}
+
+.success-1{background:#16A34A;}
+.success-2{background:#22C55E;}
+.success-3{background:#86EFAC;}
+
+.warning-1{background:#D97706;}
+.warning-2{background:#F59E0B;}
+.warning-3{background:#FCD34D;}
+
+.error-1{background:#DC2626;}
+.error-2{background:#EF4444;}
+.error-3{background:#FCA5A5;}
+
+.neutral-1{background:#111827;}
+.neutral-2{background:#6B7280;}
+.neutral-3{
+    background:#E5E7EB;
+    color:#333;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎨 Color Palette System</h1>
+
+    <div class="palette-group">
+        <div class="palette-title">Primary Colors</div>
+        <div class="colors">
+            <div class="color-card primary-1">#2563EB</div>
+            <div class="color-card primary-2">#3B82F6</div>
+            <div class="color-card primary-3">#93C5FD</div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">Secondary Colors</div>
+        <div class="colors">
+            <div class="color-card secondary-1">#7C3AED</div>
+            <div class="color-card secondary-2">#A855F7</div>
+            <div class="color-card secondary-3">#D8B4FE</div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">Success Colors</div>
+        <div class="colors">
+            <div class="color-card success-1">#16A34A</div>
+            <div class="color-card success-2">#22C55E</div>
+            <div class="color-card success-3">#86EFAC</div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">Warning Colors</div>
+        <div class="colors">
+            <div class="color-card warning-1">#D97706</div>
+            <div class="color-card warning-2">#F59E0B</div>
+            <div class="color-card warning-3">#FCD34D</div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">Error Colors</div>
+        <div class="colors">
+            <div class="color-card error-1">#DC2626</div>
+            <div class="color-card error-2">#EF4444</div>
+            <div class="color-card error-3">#FCA5A5</div>
+        </div>
+    </div>
+
+    <div class="palette-group">
+        <div class="palette-title">Neutral Colors</div>
+        <div class="colors">
+            <div class="color-card neutral-1">#111827</div>
+            <div class="color-card neutral-2">#6B7280</div>
+            <div class="color-card neutral-3">#E5E7EB</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

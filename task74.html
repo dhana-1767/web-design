@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brochure Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    padding:40px;
+}
+
+.brochure{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.panel{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cover{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    padding:40px 25px;
+    text-align:center;
+    min-height:600px;
+}
+
+.cover h1{
+    font-size:42px;
+    margin-top:100px;
+}
+
+.cover p{
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.logo{
+    font-size:60px;
+}
+
+.content{
+    padding:30px;
+    min-height:600px;
+}
+
+.content h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.feature{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.contact{
+    background:#111827;
+    color:white;
+    padding:30px;
+    min-height:600px;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact-info{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:6px;
+}
+</style>
+</head>
+<body>
+
+<div class="brochure">
+
+    <!-- Cover Panel -->
+    <div class="panel cover">
+        <div class="logo">🚀</div>
+
+        <h1>YOUR BRAND</h1>
+
+        <p>
+            Innovative solutions designed to help your
+            business grow faster and smarter.
+        </p>
+    </div>
+
+    <!-- Middle Panel -->
+    <div class="panel content">
+
+        <h2>About Us</h2>
+
+        <p>
+            We provide professional services that help
+            businesses achieve success through creativity,
+            technology, and innovation.
+        </p>
+
+        <h2>Our Services</h2>
+
+        <div class="feature">
+            🌐 Web Design & Development
+        </div>
+
+        <div class="feature">
+            📱 Mobile App Development
+        </div>
+
+        <div class="feature">
+            🎨 Branding & Marketing
+        </div>
+
+        <div class="feature">
+            📈 Digital Strategy
+        </div>
+
+    </div>
+
+    <!-- Contact Panel -->
+    <div class="panel contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-info">
+            📍 Salem, Tamil Nadu
+        </div>
+
+        <div class="contact-info">
+            📞 +91 98765 43210
+        </div>
+
+        <div class="contact-info">
+            📧 info@yourbrand.com
+        </div>
+
+        <div class="contact-info">
+            🌐 www.yourbrand.com
+        </div>
+
+        <p style="margin-top:30px;line-height:1.8;">
+            Ready to transform your business?
+            Connect with us today and let's build
+            something amazing together.
+        </p>
+
+        <a href="#" class="btn">Get Started</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

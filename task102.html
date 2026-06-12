@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Solutions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+}
+
+/* Header */
+header{
+    background:#1c2533;
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff9800;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#ff9800;
+}
+
+/* Hero */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+}
+
+/* Services */
+.services{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.services h2{
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#1c2533;
+}
+
+/* About */
+.about{
+    background:#1c2533;
+    color:white;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+/* Stats */
+.stats{
+    padding:70px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    text-align:center;
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.stat h3{
+    color:#ff9800;
+    font-size:40px;
+}
+
+/* Contact */
+.contact{
+    background:#ff9800;
+    color:white;
+    text-align:center;
+    padding:70px 8%;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+.hero-content h1{
+    font-size:38px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">INDUSTRO</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Industrial Engineering Solutions</h1>
+        <p>Delivering Innovation, Safety & Efficiency Worldwide</p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+</section>
+
+<section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+        <div class="card">
+            <h3>Manufacturing</h3>
+            <p>Advanced production and industrial automation solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Engineering</h3>
+            <p>Mechanical, electrical and process engineering services.</p>
+        </div>
+
+        <div class="card">
+            <h3>Maintenance</h3>
+            <p>Preventive and predictive maintenance programs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Automation</h3>
+            <p>Smart factory and Industry 4.0 integration services.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>About Our Company</h2>
+    <p>
+        We provide world-class industrial solutions, helping businesses
+        improve productivity, safety and operational excellence.
+    </p>
+</section>
+
+<section class="stats">
+    <div class="stat">
+        <h3>25+</h3>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat">
+        <h3>500+</h3>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat">
+        <h3>120+</h3>
+        <p>Expert Engineers</p>
+    </div>
+
+    <div class="stat">
+        <h3>98%</h3>
+        <p>Client Satisfaction</p>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Ready to Build the Future?</h2>
+    <p>Contact our industrial experts today.</p>
+</section>
+
+<footer>
+    © 2026 INDUSTRO | Industrial Engineering Solutions
+</footer>
+
+</body>
+</html>

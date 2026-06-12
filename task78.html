@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Poster</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.poster{
+    width:500px;
+    min-height:850px;
+    background:linear-gradient(135deg,#7c3aed,#2563eb);
+    border-radius:20px;
+    overflow:hidden;
+    color:white;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    position:relative;
+}
+
+.circle1,
+.circle2{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+}
+
+.circle1{
+    width:250px;
+    height:250px;
+    top:-80px;
+    right:-80px;
+}
+
+.circle2{
+    width:180px;
+    height:180px;
+    bottom:-50px;
+    left:-50px;
+}
+
+.content{
+    padding:50px 35px;
+    position:relative;
+    z-index:2;
+}
+
+.logo{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.tag{
+    background:rgba(255,255,255,0.2);
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:56px;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:22px;
+    margin-bottom:35px;
+    opacity:0.9;
+}
+
+.details{
+    background:rgba(255,255,255,0.12);
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:30px;
+    text-align:left;
+}
+
+.details p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.speakers{
+    margin-bottom:30px;
+}
+
+.speaker{
+    background:rgba(255,255,255,0.12);
+    padding:15px;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.footer{
+    margin-top:30px;
+    font-size:15px;
+    opacity:0.85;
+}
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <div class="content">
+
+        <div class="logo">🚀</div>
+
+        <div class="tag">TECH CONFERENCE 2026</div>
+
+        <h1>INNOVATE<br>THE FUTURE</h1>
+
+        <div class="subtitle">
+            Technology • AI • Innovation
+        </div>
+
+        <div class="details">
+            <p>📅 15 July 2026</p>
+            <p>⏰ 10:00 AM - 5:00 PM</p>
+            <p>📍 Salem Convention Center</p>
+        </div>
+
+        <div class="speakers">
+            <div class="speaker">🎤 Industry Expert Speaker</div>
+            <div class="speaker">🤖 AI Specialist</div>
+            <div class="speaker">💡 Startup Founder</div>
+        </div>
+
+        <a href="#" class="btn">Register Now</a>
+
+        <div class="footer">
+            www.yourevent.com
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

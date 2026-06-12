@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neumorphism UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e0e5ec;
+}
+
+/* Neumorphic Card */
+.card{
+    width:350px;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    background:#e0e5ec;
+    box-shadow:
+        10px 10px 20px #a3b1c6,
+        -10px -10px 20px #ffffff;
+}
+
+.card h2{
+    color:#333;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+/* Input */
+.input-box{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#e0e5ec;
+    box-shadow:
+        inset 5px 5px 10px #a3b1c6,
+        inset -5px -5px 10px #ffffff;
+}
+
+/* Button */
+.btn{
+    padding:12px 30px;
+    border:none;
+    border-radius:12px;
+    background:#e0e5ec;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:
+        5px 5px 10px #a3b1c6,
+        -5px -5px 10px #ffffff;
+    transition:0.2s;
+}
+
+.btn:active{
+    box-shadow:
+        inset 5px 5px 10px #a3b1c6,
+        inset -5px -5px 10px #ffffff;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Neumorphism UI</h2>
+    <p>Soft shadows create a modern, minimal interface.</p>
+
+    <input type="text" class="input-box" placeholder="Enter your name">
+
+    <button class="btn">Submit</button>
+</div>
+
+</body>
+</html>

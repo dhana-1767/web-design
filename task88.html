@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Screens</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:360px;
+    height:640px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    position:relative;
+}
+
+.screen{
+    display:none;
+    text-align:center;
+    padding:40px 25px;
+    height:100%;
+}
+
+.active{
+    display:block;
+}
+
+.illustration{
+    width:220px;
+    height:220px;
+    margin:30px auto;
+    border-radius:20px;
+    background:#e5e7eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+p{
+    color:#666;
+    line-height:1.6;
+}
+
+.controls{
+    position:absolute;
+    bottom:30px;
+    width:100%;
+    text-align:center;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:25px;
+    background:#4f46e5;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.dots{
+    margin-bottom:20px;
+}
+
+.dot{
+    height:10px;
+    width:10px;
+    background:#ccc;
+    display:inline-block;
+    border-radius:50%;
+    margin:0 5px;
+}
+
+.active-dot{
+    background:#4f46e5;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Screen 1 -->
+    <div class="screen active" id="screen1">
+        <div class="illustration">📱</div>
+        <h2>Welcome</h2>
+        <p>Discover amazing features and enjoy a seamless experience.</p>
+    </div>
+
+    <!-- Screen 2 -->
+    <div class="screen" id="screen2">
+        <div class="illustration">🛒</div>
+        <h2>Shop Easily</h2>
+        <p>Browse products, add to cart, and checkout quickly.</p>
+    </div>
+
+    <!-- Screen 3 -->
+    <div class="screen" id="screen3">
+        <div class="illustration">🚀</div>
+        <h2>Get Started</h2>
+        <p>Create your account and begin your journey today.</p>
+    </div>
+
+    <div class="controls">
+        <div class="dots">
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <button onclick="nextScreen()">Next</button>
+    </div>
+
+</div>
+
+<script>
+let current = 1;
+
+function nextScreen(){
+    document.getElementById("screen"+current)
+        .classList.remove("active");
+
+    current++;
+
+    if(current > 3){
+        alert("Onboarding Complete!");
+        current = 1;
+    }
+
+    document.getElementById("screen"+current)
+        .classList.add("active");
+
+    let dots = document.querySelectorAll(".dot");
+    dots.forEach(dot => dot.classList.remove("active-dot"));
+    dots[current-1].classList.add("active-dot");
+}
+</script>
+
+</body>
+</html>

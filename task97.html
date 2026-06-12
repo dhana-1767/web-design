@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessible Website Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    background:#ffffff;
+    color:#111111;
+}
+
+/* Skip Link */
+.skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:#000;
+    color:#fff;
+    padding:10px;
+    z-index:100;
+}
+
+.skip-link:focus{
+    left:10px;
+}
+
+/* Header */
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin-bottom:10px;
+}
+
+/* Navigation */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px;
+}
+
+nav a:hover,
+nav a:focus{
+    background:#0055aa;
+    border-radius:4px;
+}
+
+/* Main Layout */
+.container{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+main, aside{
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:8px;
+}
+
+/* Buttons */
+.btn{
+    display:inline-block;
+    background:#0055aa;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:15px;
+}
+
+.btn:hover,
+.btn:focus{
+    background:#003d80;
+}
+
+/* Focus Indicator */
+a:focus,
+button:focus,
+input:focus{
+    outline:3px solid #ffbf47;
+    outline-offset:2px;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">
+Skip to Main Content
+</a>
+
+<header>
+    <h1>Accessible Website</h1>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+
+    <main id="main-content">
+        <h2>Welcome</h2>
+
+        <p>
+            This layout is designed with accessibility in mind,
+            ensuring usability for keyboard users, screen readers,
+            and people with visual impairments.
+        </p>
+
+        <a href="#" class="btn">Learn More</a>
+    </main>
+
+    <aside>
+        <h3>Latest Updates</h3>
+
+        <ul>
+            <li>Accessibility Improvements</li>
+            <li>Responsive Design Updates</li>
+            <li>Performance Optimization</li>
+        </ul>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Accessible Web Design</p>
+</footer>
+
+</body>
+</html>

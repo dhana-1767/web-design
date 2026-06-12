@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Application UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    height:100vh;
+}
+
+/* Main Container */
+.chat-app{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:320px;
+    background:#ffffff;
+    border-right:1px solid #e5e7eb;
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar-header{
+    padding:20px;
+    font-size:24px;
+    font-weight:bold;
+    color:#2563eb;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.search-box{
+    padding:15px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:25px;
+    outline:none;
+}
+
+/* Contacts */
+.contacts{
+    flex:1;
+    overflow-y:auto;
+}
+
+.contact{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact:hover{
+    background:#f8fafc;
+}
+
+.contact img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.contact-info h4{
+    margin-bottom:4px;
+}
+
+.contact-info p{
+    color:#6b7280;
+    font-size:13px;
+}
+
+.online{
+    width:10px;
+    height:10px;
+    background:#22c55e;
+    border-radius:50%;
+    margin-left:auto;
+}
+
+/* Chat Area */
+.chat-area{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+.chat-header{
+    background:white;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.chat-header img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.chat-header h3{
+    margin-bottom:3px;
+}
+
+.chat-header p{
+    color:#22c55e;
+    font-size:14px;
+}
+
+/* Messages */
+.messages{
+    flex:1;
+    padding:25px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.message{
+    max-width:70%;
+    padding:12px 16px;
+    border-radius:15px;
+    line-height:1.5;
+}
+
+.received{
+    background:white;
+    align-self:flex-start;
+    border:1px solid #e5e7eb;
+}
+
+.sent{
+    background:#2563eb;
+    color:white;
+    align-self:flex-end;
+}
+
+/* Input Area */
+.chat-input{
+    background:white;
+    padding:15px;
+    border-top:1px solid #e5e7eb;
+    display:flex;
+    gap:10px;
+}
+
+.chat-input input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:25px;
+    outline:none;
+}
+
+.chat-input button{
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.sidebar{
+    width:90px;
+}
+
+.sidebar-header{
+    text-align:center;
+    font-size:18px;
+}
+
+.contact-info{
+    display:none;
+}
+
+.search-box{
+    display:none;
+}
+
+.chat-header h3,
+.chat-header p{
+    font-size:14px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="chat-app">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            💬 ChatBox
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search chats">
+        </div>
+
+        <div class="contacts">
+
+            <div class="contact">
+                <img src="https://via.placeholder.com/50" alt="">
+                <div class="contact-info">
+                    <h4>Emma</h4>
+                    <p>See you soon 😊</p>
+                </div>
+                <div class="online"></div>
+            </div>
+
+            <div class="contact">
+                <img src="https://via.placeholder.com/50" alt="">
+                <div class="contact-info">
+                    <h4>David</h4>
+                    <p>Project completed</p>
+                </div>
+                <div class="online"></div>
+            </div>
+
+            <div class="contact">
+                <img src="https://via.placeholder.com/50" alt="">
+                <div class="contact-info">
+                    <h4>Sarah</h4>
+                    <p>Let's meet tomorrow</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+
+        <div class="chat-header">
+            <img src="https://via.placeholder.com/50" alt="">
+            <div>
+                <h3>Emma Watson</h3>
+                <p>● Online</p>
+            </div>
+        </div>
+
+        <div class="messages">
+
+            <div class="message received">
+                Hi! How are you today? 👋
+            </div>
+
+            <div class="message sent">
+                I'm doing great! Working on a new UI project. 🚀
+            </div>
+
+            <div class="message received">
+                That's awesome. Can't wait to see it!
+            </div>
+
+            <div class="message sent">
+                I'll share the design soon 😊
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+            <input type="text" placeholder="Type a message...">
+            <button>Send</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

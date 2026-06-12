@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Card Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+/* Front Side */
+.id-card{
+    width:320px;
+    height:520px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.header{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.company-logo{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.company-name{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.profile{
+    text-align:center;
+    padding:25px;
+}
+
+.avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#e5e7eb;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+}
+
+.name{
+    margin-top:20px;
+    font-size:24px;
+    font-weight:bold;
+    color:#111827;
+}
+
+.role{
+    color:#2563eb;
+    font-weight:600;
+    margin-top:5px;
+}
+
+.details{
+    padding:0 25px;
+}
+
+.detail{
+    margin:15px 0;
+    font-size:15px;
+}
+
+.detail strong{
+    color:#111827;
+}
+
+.barcode{
+    margin:25px auto;
+    width:180px;
+    height:50px;
+    background:repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 3px,
+        #fff 3px,
+        #fff 6px
+    );
+}
+
+/* Back Side */
+.back{
+    width:320px;
+    height:520px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.back-header{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.back-content{
+    padding:25px;
+}
+
+.info{
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#666;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<!-- Front Side -->
+<div class="id-card">
+
+    <div class="header">
+        <div class="company-logo">🏢</div>
+        <div class="company-name">ABC Technologies</div>
+    </div>
+
+    <div class="profile">
+        <div class="avatar">👨</div>
+
+        <div class="name">John Doe</div>
+        <div class="role">Software Engineer</div>
+    </div>
+
+    <div class="details">
+        <div class="detail"><strong>ID:</strong> EMP001</div>
+        <div class="detail"><strong>Department:</strong> IT</div>
+        <div class="detail"><strong>Phone:</strong> +91 98765 43210</div>
+        <div class="detail"><strong>Email:</strong> john@company.com</div>
+    </div>
+
+    <div class="barcode"></div>
+
+</div>
+
+<!-- Back Side -->
+<div class="back">
+
+    <div class="back-header">
+        <h2>Employee Information</h2>
+    </div>
+
+    <div class="back-content">
+
+        <div class="info">
+            <strong>Address:</strong><br>
+            Salem, Tamil Nadu, India
+        </div>
+
+        <div class="info">
+            <strong>Emergency Contact:</strong><br>
+            +91 98765 11111
+        </div>
+
+        <div class="info">
+            <strong>Valid Until:</strong><br>
+            31 Dec 2027
+        </div>
+
+        <div class="info">
+            This card is the property of ABC Technologies.
+            If found, please return it to the company.
+        </div>
+
+        <div class="footer">
+            www.company.com
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

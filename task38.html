@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    padding:40px;
+}
+
+.gallery-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#333;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:transform 0.5s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.1);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.4s;
+}
+
+.gallery-item:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    margin-bottom:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    body{
+        padding:20px;
+    }
+
+    .gallery-title{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1 class="gallery-title">🖼️ Image Gallery</h1>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="https://picsum.photos/500/400?random=1" alt="">
+        <div class="overlay">
+            <h3>Mountain View</h3>
+            <p>Beautiful Nature</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://picsum.photos/500/400?random=2" alt="">
+        <div class="overlay">
+            <h3>City Lights</h3>
+            <p>Urban Photography</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://picsum.photos/500/400?random=3" alt="">
+        <div class="overlay">
+            <h3>Ocean Waves</h3>
+            <p>Travel Collection</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://picsum.photos/500/400?random=4" alt="">
+        <div class="overlay">
+            <h3>Forest Path</h3>
+            <p>Nature Walk</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://picsum.photos/500/400?random=5" alt="">
+        <div class="overlay">
+            <h3>Sunset Beach</h3>
+            <p>Golden Hour</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://picsum.photos/500/400?random=6" alt="">
+        <div class="overlay">
+            <h3>Architecture</h3>
+            <p>Modern Design</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

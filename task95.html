@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Watch UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#101010;
+}
+
+.watch{
+    width:320px;
+    height:420px;
+    background:#000;
+    border:12px solid #333;
+    border-radius:50px;
+    padding:20px;
+    color:white;
+    box-shadow:0 0 30px rgba(0,255,255,0.25);
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.battery{
+    color:#00ff88;
+    font-size:14px;
+}
+
+.time{
+    text-align:center;
+    margin-top:20px;
+}
+
+.time h1{
+    font-size:56px;
+    font-weight:700;
+}
+
+.time p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:25px;
+}
+
+.card{
+    background:#161616;
+    border-radius:18px;
+    padding:15px;
+    text-align:center;
+}
+
+.card h3{
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:8px;
+}
+
+.card span{
+    font-size:22px;
+    font-weight:bold;
+    color:#00e5ff;
+}
+
+.actions{
+    display:flex;
+    justify-content:space-around;
+    margin-top:25px;
+}
+
+.btn{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#1f1f1f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#00e5ff;
+    color:#000;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#00ff88;
+    font-size:13px;
+}
+</style>
+</head>
+<body>
+
+<div class="watch">
+
+    <div class="top">
+        <span>📶 LTE</span>
+        <span class="battery">🔋 87%</span>
+    </div>
+
+    <div class="time">
+        <h1>10:45</h1>
+        <p>Monday, June 8</p>
+    </div>
+
+    <div class="stats">
+        <div class="card">
+            <h3>❤️ Heart Rate</h3>
+            <span>78 BPM</span>
+        </div>
+
+        <div class="card">
+            <h3>👣 Steps</h3>
+            <span>8,432</span>
+        </div>
+
+        <div class="card">
+            <h3>🌡 Temp</h3>
+            <span>27°C</span>
+        </div>
+
+        <div class="card">
+            <h3>☁ Weather</h3>
+            <span>Sunny</span>
+        </div>
+    </div>
+
+    <div class="actions">
+        <div class="btn">📞</div>
+        <div class="btn">💬</div>
+        <div class="btn">🎵</div>
+        <div class="btn">⚙️</div>
+    </div>
+
+    <div class="footer">
+        Goal Progress: 84%
+    </div>
+
+</div>
+
+</body>
+</html>

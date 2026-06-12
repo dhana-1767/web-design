@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Presentation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    background:#fff;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2563eb;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.logo-display{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:220px;
+    background:#2563eb;
+    color:white;
+    border-radius:12px;
+    font-size:60px;
+    font-weight:bold;
+}
+
+.logo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.logo-card{
+    height:180px;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.light{
+    background:#ffffff;
+    border:1px solid #ddd;
+    color:#2563eb;
+}
+
+.dark{
+    background:#111827;
+    color:white;
+}
+
+.color{
+    background:#2563eb;
+    color:white;
+}
+
+.colors{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.swatch{
+    width:120px;
+    height:100px;
+    border-radius:10px;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+}
+
+.primary{background:#2563EB;}
+.secondary{background:#7C3AED;}
+.accent{background:#06B6D4;}
+.darkcolor{background:#111827;}
+
+.mockup{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.mockup-box{
+    height:180px;
+    background:#e5e7eb;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:600;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Logo Presentation</h1>
+
+    <!-- Main Logo -->
+    <div class="section">
+        <h2>Primary Logo</h2>
+        <div class="logo-display">
+            BRAND
+        </div>
+    </div>
+
+    <!-- Logo Variations -->
+    <div class="section">
+        <h2>Logo Variations</h2>
+
+        <div class="logo-grid">
+            <div class="logo-card light">BRAND</div>
+            <div class="logo-card dark">BRAND</div>
+            <div class="logo-card color">BRAND</div>
+        </div>
+    </div>
+
+    <!-- Brand Colors -->
+    <div class="section">
+        <h2>Brand Colors</h2>
+
+        <div class="colors">
+            <div class="swatch primary">#2563EB</div>
+            <div class="swatch secondary">#7C3AED</div>
+            <div class="swatch accent">#06B6D4</div>
+            <div class="swatch darkcolor">#111827</div>
+        </div>
+    </div>
+
+    <!-- Mockups -->
+    <div class="section">
+        <h2>Logo Applications</h2>
+
+        <div class="mockup">
+            <div class="mockup-box">Business Card</div>
+            <div class="mockup-box">Website Header</div>
+            <div class="mockup-box">Mobile App Icon</div>
+            <div class="mockup-box">Packaging Design</div>
+        </div>
+    </div>
+
+    <!-- Guidelines -->
+    <div class="section">
+        <h2>Usage Guidelines</h2>
+
+        <ul style="line-height:2;">
+            <li>Maintain logo proportions.</li>
+            <li>Use approved brand colors only.</li>
+            <li>Ensure adequate clear space around the logo.</li>
+            <li>Avoid stretching, rotating, or distorting the logo.</li>
+            <li>Use high-contrast backgrounds for visibility.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

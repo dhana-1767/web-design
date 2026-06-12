@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webinar Poster</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.poster{
+    width:500px;
+    min-height:850px;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    border-radius:24px;
+    color:white;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.shape1,
+.shape2{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+}
+
+.shape1{
+    width:250px;
+    height:250px;
+    top:-80px;
+    right:-80px;
+}
+
+.shape2{
+    width:180px;
+    height:180px;
+    bottom:-50px;
+    left:-50px;
+}
+
+.content{
+    padding:50px 35px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 20px;
+    background:rgba(255,255,255,0.2);
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.icon{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:20px;
+    opacity:0.9;
+    margin-bottom:30px;
+}
+
+.speaker{
+    background:rgba(255,255,255,0.12);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.speaker img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#fff;
+}
+
+.speaker h3{
+    margin-top:10px;
+}
+
+.details{
+    background:rgba(255,255,255,0.12);
+    padding:25px;
+    border-radius:15px;
+    text-align:left;
+    margin-bottom:30px;
+}
+
+.details p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:white;
+    color:#4f46e5;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.footer{
+    margin-top:25px;
+    font-size:14px;
+    opacity:0.85;
+}
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+
+    <div class="content">
+
+        <div class="badge">LIVE WEBINAR 2026</div>
+
+        <div class="icon">🎥</div>
+
+        <h1>AI & FUTURE<br>TECHNOLOGIES</h1>
+
+        <div class="subtitle">
+            Learn the latest trends in Artificial Intelligence
+        </div>
+
+        <div class="speaker">
+            <img src="https://via.placeholder.com/90" alt="Speaker">
+            <h3>Dr. John Smith</h3>
+            <p>AI Research Expert</p>
+        </div>
+
+        <div class="details">
+            <p>📅 Date: 20 July 2026</p>
+            <p>⏰ Time: 6:00 PM IST</p>
+            <p>🌐 Platform: Zoom Live</p>
+            <p>🎓 Free E-Certificate</p>
+        </div>
+
+        <a href="#" class="btn">Register Free</a>
+
+        <div class="footer">
+            www.webinarevent.com
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

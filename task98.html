@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SEO-friendly website template with responsive UI design and semantic HTML structure.">
+    <meta name="keywords" content="SEO, Responsive Design, HTML, CSS, Website Template">
+    <meta name="author" content="Your Company">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SEO Friendly Website Template</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f8f9fa;
+            color:#333;
+            line-height:1.6;
+        }
+
+        header{
+            background:#2563eb;
+            color:#fff;
+            padding:20px 5%;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:20px;
+        }
+
+        nav a{
+            color:#fff;
+            text-decoration:none;
+        }
+
+        .hero{
+            text-align:center;
+            padding:80px 20px;
+            background:#fff;
+        }
+
+        .hero h1{
+            font-size:2.5rem;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin:auto;
+            color:#666;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 25px;
+            background:#2563eb;
+            color:#fff;
+            text-decoration:none;
+            border-radius:6px;
+        }
+
+        .services{
+            padding:60px 5%;
+        }
+
+        .services h2{
+            text-align:center;
+            margin-bottom:40px;
+        }
+
+        .service-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h3{
+            margin-bottom:10px;
+        }
+
+        article{
+            padding:60px 5%;
+            background:#fff;
+        }
+
+        article h2{
+            margin-bottom:20px;
+        }
+
+        footer{
+            background:#1f2937;
+            color:#fff;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav ul{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero h1{
+                font-size:2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>BrandName</h2>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>SEO Friendly Website Design</h1>
+        <p>
+            Build high-performance websites with responsive layouts,
+            semantic HTML structure, and search-engine-friendly content.
+        </p>
+
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+
+        <div class="service-grid">
+
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Modern responsive websites optimized for SEO.</p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Marketing</h3>
+                <p>Improve visibility and search rankings.</p>
+            </div>
+
+            <div class="card">
+                <h3>Content Strategy</h3>
+                <p>Create high-quality content for better engagement.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <article>
+        <h2>Why SEO Matters</h2>
+
+        <p>
+            Search Engine Optimization helps websites rank higher in search
+            results, increasing traffic, visibility, and conversions.
+            A well-structured website improves both user experience and
+            search engine indexing.
+        </p>
+    </article>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 BrandName. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

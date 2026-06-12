@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Menu</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f6f9;
+}
+
+/* Sidebar */
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#111827;
+    color:white;
+    transition:0.3s;
+    overflow:hidden;
+}
+
+.sidebar.collapsed{
+    width:80px;
+}
+
+.logo{
+    padding:25px;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.menu{
+    list-style:none;
+    padding:20px 0;
+}
+
+.menu li{
+    margin:8px 12px;
+}
+
+.menu a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.menu a:hover,
+.menu a.active{
+    background:#2563eb;
+}
+
+.icon{
+    font-size:20px;
+    min-width:24px;
+}
+
+.sidebar.collapsed .text{
+    display:none;
+}
+
+/* Main Content */
+.main{
+    flex:1;
+    padding:25px;
+}
+
+.topbar{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.toggle-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.content{
+    margin-top:30px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    z-index:1000;
+}
+
+.sidebar.show{
+    left:0;
+}
+
+.main{
+    width:100%;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+
+    <div class="logo">
+        🚀 AdminPro
+    </div>
+
+    <ul class="menu">
+        <li>
+            <a href="#" class="active">
+                <span class="icon">🏠</span>
+                <span class="text">Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon">👥</span>
+                <span class="text">Users</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon">📊</span>
+                <span class="text">Analytics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon">📁</span>
+                <span class="text">Projects</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon">💬</span>
+                <span class="text">Messages</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon">⚙️</span>
+                <span class="text">Settings</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon">🚪</span>
+                <span class="text">Logout</span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <div class="topbar">
+        <button class="toggle-btn" onclick="toggleSidebar()">
+            ☰
+        </button>
+
+        <h2>Sidebar Navigation Menu</h2>
+    </div>
+
+    <div class="content">
+        <h3>Welcome to the Dashboard</h3>
+        <br>
+        <p>
+            This is a responsive sidebar navigation menu.
+            Click the menu button to collapse or expand
+            the sidebar.
+        </p>
+    </div>
+
+</div>
+
+<script>
+
+function toggleSidebar(){
+
+    const sidebar =
+    document.getElementById("sidebar");
+
+    if(window.innerWidth <= 768){
+        sidebar.classList.toggle("show");
+    }else{
+        sidebar.classList.toggle("collapsed");
+    }
+}
+
+</script>
+
+</body>
+</html>

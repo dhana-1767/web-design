@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Card Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:420px;
+    height:240px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Front Side */
+.front{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    padding:30px;
+    position:relative;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.name{
+    font-size:28px;
+    font-weight:700;
+}
+
+.role{
+    font-size:16px;
+    opacity:0.9;
+    margin-top:5px;
+}
+
+.pattern{
+    position:absolute;
+    right:-40px;
+    top:-40px;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+}
+
+/* Back Side */
+.back{
+    background:white;
+    padding:30px;
+    color:#333;
+}
+
+.back h3{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.info{
+    margin-bottom:12px;
+    font-size:15px;
+}
+
+.info strong{
+    color:#111827;
+}
+
+.website{
+    margin-top:20px;
+    color:#2563eb;
+    font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<!-- Front -->
+<div class="card front">
+    <div class="pattern"></div>
+
+    <div class="logo">🚀</div>
+
+    <div class="name">John Doe</div>
+    <div class="role">UI/UX Designer</div>
+</div>
+
+<!-- Back -->
+<div class="card back">
+    <h3>Contact Information</h3>
+
+    <div class="info">
+        <strong>📞 Phone:</strong> +91 98765 43210
+    </div>
+
+    <div class="info">
+        <strong>📧 Email:</strong> john@example.com
+    </div>
+
+    <div class="info">
+        <strong>📍 Address:</strong> Salem, Tamil Nadu
+    </div>
+
+    <div class="info">
+        <strong>💼 LinkedIn:</strong> linkedin.com/in/johndoe
+    </div>
+
+    <div class="website">
+        www.yourwebsite.com
+    </div>
+</div>
+
+</body>
+</html>
